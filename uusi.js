@@ -1,3 +1,4 @@
+// Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -33,7 +34,7 @@ function newElement() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("Sinun täytyy kirjottaa jotain!");
+    alert("Sinun täytyy kirjoittaa jotain");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -44,19 +45,11 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-  
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
   }
-}, false);
-}
 }

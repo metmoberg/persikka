@@ -1,0 +1,21 @@
+
+function tallenna () {
+  console.log("Tallennetaan...")
+  var n = document.getElementById("name").value;
+  daatta = {tieto: t};
+  var old = JSON.parse(localStorage.getItem('tiedot'));
+  old.push(daatta);
+  localStorage.setItem('tiedot' , JSON.stringify(old));
+}
+
+function hae {
+  console.log("Haetaan...")
+  var list = "<table><tr><th>Tieto</th></tr>\n";
+  var parsed = JSON.parse(localStorage.getItem('tiedot'));
+  for (i= 0; i<= parsed.length - 1; i++) {
+      console.log(i + ' = ' + parsed[i].nimi + " " + parsed[i].email);
+      list += "<tr><td><i>" + parsed[i].nimi + "</i></td>\n<td><i>" + parsed[i].email + "</i></tr></td>"
+  }
+  list += "</table>";
+  document.querySelector(".display-area").innerHTML = list;
+}
