@@ -133,14 +133,14 @@ main{
 .task .actions button:active{
     opacity: 0.6;
 }
-.task .actions .Edit{
-    color: var(--lightgreen);
+.task .actions .Muokkaa{
+    color: turquoise);
 }
-.task .actions .Delete{
-    color: darkcyan;
+.task .actions .Poista{
+    color: darkblue;
 }
-.task .actions .Completed{
-    color: var(--orange)
+.task .actions .Tehty{
+    color: lightgreen)
 }
 
 .strike {

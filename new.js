@@ -54,14 +54,14 @@ window.addEventListener('load', ()=>{
 
         task_edit_botton.addEventListener('click', ()=>{
             
-            if (task_edit_botton.innerText.toLowerCase() =="edit") {
+            if (task_edit_botton.innerText.toLowerCase() =="muokkaa") {
                     task_input.removeAttribute("readonly");
                     task_input.focus();
                     task_edit_botton.innerText = "Tallenna";
                     task_input.style.textDecoration="none"
             }else{
                 task_input.setAttribute("readonly", "readonly");
-                task_edit_botton.innerText ="Edit";
+                task_edit_botton.innerText ="Muokkaa";
                 
             }
         });
